@@ -1,0 +1,13 @@
+{
+  "name": "divforward",
+  "author": "P-Chan",
+  "description": "マネーフォワード ME の資産ページの株式情報を元に配当金を計算する拡張機能",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["https://moneyforward.com/bs/portfolio"],
+      "js": ["jquery.js", "app.js"]
+    }
+  ]
+}
