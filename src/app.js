@@ -48,7 +48,7 @@ import commaNumber from 'comma-number'
         break
 
       case 4:
-        // 現在地
+        // 現在値
         data[row]['price'] = Number(text)
         break
 
