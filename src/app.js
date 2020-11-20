@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import commaNumber from 'comma-number'
 ;(async () => {
   const columns = 13
   const data = []
@@ -159,5 +160,5 @@ import $ from 'jquery'
     return prev
   }, 0)
 
-  $('#total-dividends').text(`年間配当金（予想）：${Math.floor(totalDividends)}円`)
+  $('#total-dividends').text(`年間配当金（予想）：${commaNumber(Math.floor(totalDividends))}円`)
 })()

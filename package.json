@@ -16,6 +16,7 @@
     "prebuild": "npm run clean"
   },
   "dependencies": {
+    "comma-number": "^2.0.1",
     "jquery": "^3.5.1"
   },
   "devDependencies": {
