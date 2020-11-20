@@ -12,7 +12,7 @@
   "content_scripts": [
     {
       "matches": ["https://moneyforward.com/bs/portfolio"],
-      "js": ["jquery.js", "app.js"]
+      "js": ["./dist/app.js"]
     }
   ]
 }

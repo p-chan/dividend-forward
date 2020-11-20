@@ -1,1 +1,8 @@
-jquery.js
+# cache
+.cache
+
+# dependencies
+node_modules
+
+# output
+dist

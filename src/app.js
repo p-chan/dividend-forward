@@ -1,3 +1,4 @@
+import $ from 'jquery'
 ;(async () => {
   const columns = 13
   const data = []
