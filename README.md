@@ -1,4 +1,4 @@
-# divforward
+# Dividend Forward
 
 ## Getting Started
 
