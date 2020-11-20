@@ -109,7 +109,7 @@ import $ from 'jquery'
   console.log(data)
 
   const detailsTag = `
-    <details id="divforward">
+    <details id="diviend-forward" style="margin-bottom: 24px;">
       <summary>配当情報</summary>
 
       <h1 id="total-dividends" class="heading-small"></h1>
@@ -130,7 +130,7 @@ import $ from 'jquery'
     </details>
   `
 
-  $('#portfolio_det_eq').after(detailsTag)
+  $('#portfolio_det_eq .table').before(detailsTag)
 
   data.map((element) => {
     const appendTag = `
@@ -144,7 +144,7 @@ import $ from 'jquery'
       </tr>
     `
 
-    $('#divforward table tbody').append(appendTag)
+    $('#diviend-forward table tbody').append(appendTag)
   })
 
   const totalDividends = data.reduce((prev, current) => {
