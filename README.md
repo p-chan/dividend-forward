@@ -6,8 +6,10 @@
 
 ---
 
-## Getting Started
+## 開発の始め方
 
-1. jQuery 3.x をダウンロードして、`jquery.js` として保存する
-2. `chrome://extensions/` にアクセスして、Developer mode を有効にする
-3. 本リポジトリのディレクトリをドラッグアンドドロップする
+1. `git clone git@github.com:p-chan/dividend-forward.git`
+2. `npm install` して依存関係をインストールする
+3. `chrome://extensions/` にアクセスして、Developer mode を有効にする
+4. `1.` で `clone` したディレクトリをドラッグアンドドロップする
+5. `npm run dev` して開発を始める
