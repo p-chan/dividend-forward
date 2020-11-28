@@ -1,7 +1,7 @@
 {
   "name": "dividend-forward",
   "version": "0.2.0",
-  "description": "マネーフォワード ME の資産ページに株式の配当金を追加する Chrome Extension",
+  "description": "マネーフォワード ME の資産ページに株式の配当情報を追加する Chrome Extension",
   "license": "MIT",
   "author": "P-Chan",
   "main": "app.js",
