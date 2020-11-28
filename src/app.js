@@ -107,7 +107,18 @@ import commaNumber from 'comma-number'
     })
   )
 
-  console.log(data)
+  const currencies = await Promise.all(
+    [...new Set(data.map((element) => element.dividend.currency))].map(async (element) => {
+      return await fetch(`https://api.exchangeratesapi.io/latest?base=${element}`).then(async (response) => {
+        const json = await response.json()
+
+        return {
+          currency: element,
+          rate: json['rates']['JPY'],
+        }
+      })
+    })
+  )
 
   const detailsTag = `
     <details id="diviend-forward" style="margin-bottom: 24px;">
@@ -149,15 +160,15 @@ import commaNumber from 'comma-number'
   })
 
   const totalDividends = data.reduce((prev, current) => {
-    if (current.dividend.currency === 'JPY') {
-      return prev + current.dividend.raw * current.quantity
-    }
+    let result = prev
 
-    if (current.dividend.currency === 'USD') {
-      return prev + current.dividend.raw * current.quantity * 105
-    }
+    currencies.map((currency) => {
+      if (current.dividend.currency === currency.currency) {
+        result = prev + current.dividend.raw * current.quantity * currency.rate
+      }
+    })
 
-    return prev
+    return result
   }, 0)
 
   $('#total-dividends').text(`年間配当金（予想）：${commaNumber(Math.floor(totalDividends))}円`)
