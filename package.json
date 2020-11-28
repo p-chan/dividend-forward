@@ -11,8 +11,9 @@
   },
   "scripts": {
     "build": "parcel build ./src/app.js",
-    "clean": "rimraf ./dist ./.cache",
+    "clean": "rimraf ./.cache ./dist ./package ./package.zip",
     "dev": "parcel ./src/app.js",
+    "postbuild": "node packaging.js",
     "prebuild": "npm run clean"
   },
   "dependencies": {
@@ -20,6 +21,8 @@
     "jquery": "^3.5.1"
   },
   "devDependencies": {
+    "cpx": "^1.5.0",
+    "cross-zip": "^4.0.0",
     "parcel": "^1.12.4",
     "rimraf": "^3.0.2"
   },

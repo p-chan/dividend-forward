@@ -6,3 +6,5 @@ node_modules
 
 # output
 dist
+package
+package.zip
